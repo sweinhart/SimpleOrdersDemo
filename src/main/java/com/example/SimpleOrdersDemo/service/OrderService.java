@@ -25,7 +25,7 @@ public class OrderService {
 			itemTotal.setQuantity(item.getQuantity());
 			orderSummary.getOrderSummary().add(itemTotal);
 		}
-		orderSummary.calculateTotalPriceV2();
+		orderSummary.calculateTotalPrice();
 		return orderSummary;
 	}
 }

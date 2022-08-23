@@ -23,24 +23,23 @@ public class OrderSummaryTest {
 	public void testOrderSummaryApples() {
 		Product apples = inventory.getProduct("apples");
 		orderItemTotal.setProduct(apples);
-		orderItemTotal.setQuantity(35);
+		orderItemTotal.setQuantity(10);
 		basket.add(orderItemTotal);
 		orderSummary.setOrderSummary(basket);
-		orderSummary.calculateTotalPriceV2();
+		orderSummary.calculateTotalPrice();
 		String totalPrice = orderSummary.getTotalPrice();
-		assert(totalPrice.equals("10.80"));
+		assert(totalPrice.equals("6.0"));
 	}
 	
 	@Test
 	public void testOrderSummaryOranges() {
 		Product oranges = inventory.getProduct("oranges");
 		orderItemTotal.setProduct(oranges);
-		orderItemTotal.setQuantity(35);
+		orderItemTotal.setQuantity(10);
 		basket.add(orderItemTotal);
 		orderSummary.setOrderSummary(basket);
-		orderSummary.calculateTotalPriceV2();
+		orderSummary.calculateTotalPrice();
 		String totalPrice = orderSummary.getTotalPrice();
-		System.out.println(totalPrice);
-		assert(totalPrice.equals("6.00"));
+		assert(totalPrice.equals("2.5"));
 	}
 }
