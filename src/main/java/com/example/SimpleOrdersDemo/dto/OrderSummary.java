@@ -19,7 +19,7 @@ public class OrderSummary {
 		this.orderSummary = orderSummary;
 	}
 	public String getTotalPrice() {
-		return totalPrice.toString();
+		return String.valueOf(String.format("%.2f", totalPrice));
 	}
 	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;

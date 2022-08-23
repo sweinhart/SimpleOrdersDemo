@@ -23,6 +23,6 @@ public class OrderServiceTest {
 		orderItem.setQuantity(10);
 		orderBasket.getOrderBasket().add(orderItem);
 		OrderSummary summary = orderService.createOrderSummary(orderBasket);
-		assert(summary.getTotalPrice().equals("6.0"));
+		assert(summary.getTotalPrice().equals("6.00"));
 	}
 }

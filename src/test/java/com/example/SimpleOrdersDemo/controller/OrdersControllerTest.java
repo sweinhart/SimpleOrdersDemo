@@ -46,6 +46,6 @@ public class OrdersControllerTest {
 		orderBasket.getOrderBasket().add(orderItem);
     	when(orderService.createOrderSummary(orderBasket)).thenReturn(orderSummary);
 		ResponseEntity<OrderSummary> response = ordersController.placeOrder(orderBasket);
-		assert(response.getBody().getTotalPrice().equals("6.0"));
+		assert(response.getBody().getTotalPrice().equals("6.00"));
 	}
 }

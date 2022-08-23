@@ -28,7 +28,7 @@ public class OrderSummaryTest {
 		orderSummary.setOrderSummary(basket);
 		orderSummary.calculateTotalPrice();
 		String totalPrice = orderSummary.getTotalPrice();
-		assert(totalPrice.equals("6.0"));
+		assert(totalPrice.equals("6.00"));
 	}
 	
 	@Test
@@ -40,6 +40,6 @@ public class OrderSummaryTest {
 		orderSummary.setOrderSummary(basket);
 		orderSummary.calculateTotalPrice();
 		String totalPrice = orderSummary.getTotalPrice();
-		assert(totalPrice.equals("2.5"));
+		assert(totalPrice.equals("2.50"));
 	}
 }
